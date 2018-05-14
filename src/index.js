@@ -1,14 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./web/index.css";
-import App from "./App";
-import registerServiceWorker from "./web/registerServiceWorker";
+import React from "react"
+import ReactDOM from "react-dom"
+import "./web/index.css"
+import App from "./App"
+import registerServiceWorker from "./web/registerServiceWorker"
+import { ApolloProvider } from 'react-apollo'
+import Client from './store'
 
-ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
+ReactDOM.render(
+  <ApolloProvider client={Client}>
+    <App />
+  </ApolloProvider>, document.getElementById("root"))
+registerServiceWorker()
 
 const injectFonts = () => {
-  const style = document.createElement("style");
+  const style = document.createElement("style")
 
   // feather
   const feather = require("react-native-vector-icons/Fonts/Feather.ttf")
@@ -35,19 +40,6 @@ font-family: 'Entypo';
     style.styleSheet.cssText = entypoFontStyles
   } else {
     style.appendChild(document.createTextNode(entypoFontStyles))
-  }
-
-  // Octicons
-  const octiconsFont = require("react-native-vector-icons/Fonts/Octicons.ttf");
-  const octiconsFontStyles = `@font-face {
-src: url(${octiconsFont});
-font-family: 'Octions';
-}`;
-  style.type = "text/css";
-  if (style.styleSheet) {
-    style.styleSheet.cssText = octiconsFontStyles;
-  } else {
-    style.appendChild(document.createTextNode(octiconsFontStyles));
   }
 
   document.head.appendChild(style);

@@ -11,7 +11,7 @@ import * as React from 'react'
 import Icon from 'react-native-vector-icons/Feather'
 import MainFilter from './mainFilter'
 
-const MainHeader = ({toggleDrawer, sidebarVisibility, SearchVisibility, toggleSearch, toggleFilter, filterVisibility}) => (
+const MainHeader = ({toggleDrawer, SearchVisibility, toggleSearch, toggleFilter, filterVisibility}) => (
   <View>
     <View style={styles.mainHeader}>
       <Image style={styles.headerAvatar} />

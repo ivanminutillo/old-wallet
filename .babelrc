@@ -1,8 +1,11 @@
 {
-  "presets": ["babel-preset-expo", "flow"],
+  "presets": ["babel-preset-expo", "flow", "react-native"],
   "env": {
-    "development": {
-      "plugins": ["transform-object-rest-spread", "transform-react-jsx-source"]
-    }
+    "test": {"plugins": ["react-native-web/babel"]},
+    "development-web": {"plugins": ["react-native-web/babel"]},
+    "production-web": {"plugins": ["react-native-web/babel"]},
+    "test:native": {},
+    "development": {},
+    "production": {}
   }
 }

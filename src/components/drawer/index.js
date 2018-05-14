@@ -4,14 +4,14 @@ import {
   View,
   Text,
   TouchableHighlight,
-  TextInput,
   Image,
   Platform
 } from "react-native"
 import * as React from 'react'
 import Icon from 'react-native-vector-icons/Feather'
 
-const Drawer = ({toggleDrawer}) => (
+const Drawer = ({toggleDrawer}) => {
+  return (
   <View style={styles.drawerContainer}>
     <View style={styles.drawer}>
       <View style={styles.drawerProfile}>
@@ -48,7 +48,7 @@ const Drawer = ({toggleDrawer}) => (
       <View />
     </TouchableHighlight>
   </View>
-)
+)}
 
 const styles = StyleSheet.create({
   footer: {
