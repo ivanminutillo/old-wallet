@@ -1,0 +1,60 @@
+{
+  "name": "varnelli",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "web": "react-app-rewired start",
+    "build:web": "react-app-rewired build",
+    "eject:web": "react-app-rewired eject",
+    "start-native": "react-native-scripts start",
+    "eject-native": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest"
+  },
+  "dependencies": {
+    "expo": "^25.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-native": "^0.52.2",
+    "react-native-svg": "6.3.1",
+    "react-native-vector-icons": "4.6.0",
+    "react-native-web": "^0.3.2",
+    "react-scripts": "1.1.0",
+    "recompose": "0.27.0",
+    "svgs": "3.2.1"
+  },
+  "devDependencies": {
+    "@expo/vector-icons": "6.3.1",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-preset-expo": "^4.0.0",
+    "babel-preset-flow": "6.23.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "flow-bin": "^0.64.0",
+    "jest": "^22.1.4",
+    "jest-expo": "^25.1.0",
+    "jsdom": "^11.6.2",
+    "react-app-rewire-babel-loader": "^0.1.1",
+    "react-app-rewired": "^1.4.1",
+    "react-native-scripts": "^1.11.1",
+    "react-test-renderer": "^16.2.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/__tests__/*.js",
+      "!src/web/**",
+      "!src/index.js",
+      "!src/helpers/*.js"
+    ],
+    "collectCoverage": true,
+    "preset": "jest-expo",
+    "setupTestFrameworkScriptFile": "<rootDir>/testFrameworkSetup.js"
+  }
+}
